@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #571244;
+  --color-secondary: #EF4353;
+  --color-main-text: #151515;
+  --color-pending-main: #1671D9;
+  --color-purple-80: #2C0922;
+  --color-purple-90: #1D0617;
+  --color-purple-40: #8F6182;
+  --color-primary-tint: #5712441A;
+  --color-pink-50: #FDF4FF;
+  --color-footer-bg: #120D22;
+  --color-get-in-touch-bg: #1A0629;
+
+  --font-sans: "Nunito Sans", sans-serif;
+  --font-heading: "Nunito", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.6;
+  color: #151515;
+}
+
+/* Scrollbar hiding for testimonials */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
