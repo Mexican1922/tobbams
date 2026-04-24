@@ -14,7 +14,7 @@ const testimonials = [
     name: "John Davies",
     role: "Marketing Manager, E-Commerce Emporium",
     image: "/images/john.png",
-    text: "Tobams Group\u2019s Digital Marketing strategies gave our brand the boost it needed. Simple yet powerful techniques that delivered tangible results. A pleasure to collaborate with!",
+    text: "Tobams Group's Digital Marketing strategies gave our brand the boost it needed. Simple yet powerful techniques that delivered tangible results. A pleasure to collaborate with!",
   },
   {
     name: "Chinonso Nwankwo",
@@ -42,8 +42,7 @@ export default function Testimonials() {
       <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-16">
         <h2
           id="testimonials-heading"
-          className="font-[Nunito] font-semibold text-[28px] md:text-[36px] lg:text-[40px] text-main-text text-center mb-12"
-          style={{ letterSpacing: "3%" }}
+          className="font-heading font-semibold text-[28px] md:text-[36px] lg:text-[40px] text-main-text text-center mb-12"
         >
           Testimonials
         </h2>
@@ -59,37 +58,29 @@ export default function Testimonials() {
             {testimonials.map((t) => (
               <article
                 key={t.name}
-                className={`w-full lg:w-[calc(33.333%-16px)] shrink-0 border ${
-                  t.name === "John Davies"
-                    ? "border-secondary"
-                    : "border-gray-200"
-                } rounded-xl p-6 lg:p-8 flex flex-col gap-5 bg-white ${
-                  t.name === "John Davies"
-                    ? "shadow-md"
-                    : "shadow-sm hover:shadow-md"
-                } transition-shadow`}
+                className="w-full lg:w-[calc(33.333%-16px)] shrink-0 border border-gray-200 border-l-4 border-l-secondary rounded-xl p-6 lg:p-8 flex flex-col gap-5 bg-white shadow-sm hover:shadow-md transition-shadow"
               >
-                {/* Avatar Initial + name + role */}
+                {/* Avatar + name + role */}
                 <div className="flex items-center gap-4">
                   <Image
                     src={t.image}
                     alt={t.name}
                     width={50}
                     height={50}
-                    className="rounded-full"
+                    className="rounded-full object-cover"
                   />
                   <div>
-                    <p className="text-main-text text-[15px] md:text-[16px] font-bold font-[Nunito_Sans] leading-tight mb-1">
+                    <p className="text-main-text text-[15px] md:text-[16px] font-bold font-sans leading-tight mb-1">
                       {t.name}
                     </p>
-                    <p className="text-gray-500 text-[12px] md:text-[13px] font-[Nunito_Sans]">
+                    <p className="text-gray-500 text-[12px] md:text-[13px] font-sans">
                       {t.role}
                     </p>
                   </div>
                 </div>
 
                 {/* Testimonial text */}
-                <p className="text-gray-600 text-[14px] md:text-[15px] font-normal font-[Nunito_Sans] leading-[1.65]">
+                <p className="text-gray-600 text-[14px] md:text-[15px] font-sans leading-[1.65]">
                   {t.text}
                 </p>
               </article>
@@ -97,13 +88,13 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Prev / Next arrows aligned to the right like screenshot */}
+        {/* Prev / Next arrows */}
         <div className="w-full flex justify-end gap-3 pr-2">
           <button
             onClick={() => setPage((p) => Math.max(p - 1, 0))}
             disabled={page === 0}
             aria-label="Previous testimonials"
-            className="w-10 h-10 border border-transparent flex items-center justify-center bg-[#FDE8EA] text-secondary hover:bg-[#FCD8DB] rounded-full disabled:opacity-40 disabled:cursor-not-allowed transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+            className="w-10 h-10 flex items-center justify-center bg-[#FDE8EA] text-secondary hover:bg-[#FCD8DB] rounded-full disabled:opacity-40 disabled:cursor-not-allowed transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary"
           >
             <svg
               width="24"
@@ -141,7 +132,7 @@ export default function Testimonials() {
                   : 1)
             }
             aria-label="Next testimonials"
-            className="w-10 h-10 flex items-center justify-center border border-transparent rounded-full bg-[#FDE8EA] text-secondary hover:bg-[#FCD8DB] disabled:opacity-40 disabled:cursor-not-allowed transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+            className="w-10 h-10 flex items-center justify-center bg-[#FDE8EA] text-secondary hover:bg-[#FCD8DB] rounded-full disabled:opacity-40 disabled:cursor-not-allowed transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary"
           >
             <svg
               width="24"

@@ -10,21 +10,19 @@ const benefits = [
 export default function ManagementDevelopment() {
   return (
     <section
-      className="w-full bg-white pb-16 md:pb-24 lg:pb-[120px]"
+      className="w-full bg-white pb-16 lg:pb-20"
       aria-labelledby="management-heading"
     >
       <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-16">
-        <div
-          className="bg-purple-80 rounded-[20px] p-8 md:p-10 w-full max-w-[1312px] mx-auto overflow-hidden flex flex-col lg:flex-row gap-8 lg:gap-12 items-center"
-        >
-          {/* Image */}
-          <div className="w-full lg:w-5/12 shrink-0 max-w-[592px]">
-            <div
-              className="relative w-full aspect-[592/639] overflow-hidden"
-              style={{
-                borderRadius: "8px",
-              }}
-            >
+        <div className="bg-purple-80 rounded-[20px] p-4 md:p-8 w-full max-w-[1232px] mx-auto overflow-hidden flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+          {/* Title — mobile only */}
+          <h2 className="lg:hidden w-full font-heading font-semibold text-[16px] md:text-[26px] text-white leading-tight order-1">
+            Management Development Program
+          </h2>
+
+          {/* Image — second on mobile, left on desktop */}
+          <div className="w-full lg:w-5/12 shrink-0 max-w-[500px] order-2 lg:order-1">
+            <div className="relative w-full aspect-[592/639] overflow-hidden rounded-[12px]">
               <Image
                 src="/images/management.jpg"
                 alt="Group of professionals collaborating in a management development session"
@@ -35,53 +33,45 @@ export default function ManagementDevelopment() {
             </div>
           </div>
 
-          {/* Content */}
-          <div className="w-full lg:flex-1 flex flex-col justify-center">
+          {/* Content — third on mobile, right on desktop */}
+          <div className="w-full lg:flex-1 flex flex-col justify-center order-3 lg:order-2">
             <h2
               id="management-heading"
-              className="font-[Nunito] font-semibold text-[28px] md:text-[36px] lg:text-[40px] text-white mb-6"
-              style={{ letterSpacing: "3%" }}
+              className="hidden lg:block font-heading font-semibold lg:text-[40px] text-white mb-6 leading-tight"
             >
               Management Development Program
             </h2>
-            <div className="text-white text-[16px] md:text-[18px] font-normal font-[Nunito_Sans] leading-[1.6] mb-8 space-y-6">
+            <div className="text-white/90 text-[14px] md:text-[16px] font-sans leading-[1.7] mb-8 space-y-4">
               <p>
                 Tobams Group offers a comprehensive Management Development
-                Program designed to equip corporate organisations with the high -
-                performing leaders they need to thrive.
+                Program designed to equip corporate organisations with the high
+                - performing leaders they need to thrive.
               </p>
               <p>
-                Our program includes workshops, seminars, coaching sessions, online
-                courses, and experiential learning opportunities designed to improve
-                leadership, strategic thinking, communication, and other essential
-                managerial competencies for corporate organisations.
+                Our program includes workshops, seminars, coaching sessions,
+                online courses, and experiential learning opportunities designed
+                to improve leadership, strategic thinking, communication, and
+                other essential managerial competencies for corporate
+                organisations.
               </p>
             </div>
-
-            {/* Benefit pills */}
             <div className="flex flex-col gap-3">
               {benefits.map((benefit) => (
                 <div
                   key={benefit}
-                  className="flex items-center gap-3 bg-purple-40 rounded-[8px] px-4 py-2 h-auto min-h-[40px] w-full max-w-[560px]"
+                  className="flex items-center gap-3 bg-purple-40 rounded-[8px] px-4 py-3 w-full max-w-[560px]"
                 >
                   <svg
-                    width="19"
-                    height="24"
-                    viewBox="0 0 20 26"
+                    width="12"
+                    height="16"
+                    viewBox="0 0 12 16"
                     fill="none"
                     aria-hidden="true"
                     className="shrink-0"
                   >
-                    <path
-                      d="M12.5 1L3 14h7.5L7 25l10-14H9.5L12.5 1Z"
-                      fill="#FFFFFF"
-                      stroke="#FFFFFF"
-                      strokeWidth="1"
-                      strokeLinejoin="round"
-                    />
+                    <path d="M7 0L0 9h5.5L4 16l8-9H7V0z" fill="#FFFFFF" />
                   </svg>
-                  <span className="text-white text-[16px] md:text-[18px] font-normal font-[Nunito_Sans]">
+                  <span className="text-white text-[15px] md:text-[16px] font-sans font-normal">
                     {benefit}
                   </span>
                 </div>

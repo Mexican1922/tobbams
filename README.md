@@ -4,7 +4,7 @@ A pixel-perfect rebuild of the **Training and Development** page for Tobams Grou
 
 ## 🔗 Links
 
-- **Live Site**: [Vercel Deployment](https://tobams-assessment.vercel.app) *(placeholder — update after deploy)*
+- **Live Site**: [Vercel Deployment](https://tobbams-project-assessment.vercel.app)
 - **Figma Design**: [Frontend Intern Assessment](https://www.figma.com/design/wuqCLkK1feTgB6xxSRRwZu/Frontend-Intern-Assessment?node-id=0-1)
 
 ## 🚀 Getting Started
@@ -21,12 +21,12 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ## 🛠 Tech Stack
 
-| Technology | Version | Purpose |
-|---|---|---|
-| **Next.js** | 16.x | App Router, SSR, Image optimization |
-| **Tailwind CSS** | v4 | CSS-first config (`@import "tailwindcss"`) |
-| **TypeScript** | 5.x | Type safety |
-| **next/image** | built-in | Optimized image loading |
+| Technology       | Version  | Purpose                                    |
+| ---------------- | -------- | ------------------------------------------ |
+| **Next.js**      | 16.x     | App Router, SSR, Image optimization        |
+| **Tailwind CSS** | v4       | CSS-first config (`@import "tailwindcss"`) |
+| **TypeScript**   | 5.x      | Type safety                                |
+| **next/image**   | built-in | Optimized image loading                    |
 
 ## 🎨 Design Decisions
 

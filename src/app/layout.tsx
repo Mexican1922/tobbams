@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
+import { Nunito, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "Training and Development | Tobams Group",
-  description:
-    "Tobams Group's comprehensive range of programs and resources designed to enhance skills, broaden knowledge, and propel careers forward.",
-};
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
+  weight: ["600"],
+  style: ["normal", "italic"],
+});
+
+const nunitoSans = Nunito_Sans({
+  subsets: ["latin"],
+  variable: "--font-nunito-sans",
+  weight: ["400", "600"],
+});
 
 export default function RootLayout({
   children,
@@ -13,16 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;1,600&family=Nunito+Sans:wght@400;600&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="bg-white antialiased">
-        {children}
-      </body>
+    <html lang="en" className={`${nunito.variable} ${nunitoSans.variable}`}>
+      <body className="bg-white antialiased">{children}</body>
     </html>
   );
 }

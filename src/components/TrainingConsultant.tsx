@@ -26,46 +26,45 @@ const features = [
 export default function TrainingConsultant() {
   return (
     <section
-      className="w-full bg-pink-50 py-16 md:py-20"
+      className="w-full bg-[#e9e2e7] py-16 md:py-20"
       aria-labelledby="consultant-heading"
     >
       <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-16">
         <div className="max-w-[1312px] mx-auto">
           <h2
             id="consultant-heading"
-            className="font-[Nunito] font-semibold text-[28px] md:text-[36px] lg:text-[40px] text-main-text mb-3"
+            className="font-heading font-semibold text-[24px] md:text-[36px] lg:text-[40px] text-main-text mb-3"
             style={{ letterSpacing: "3%" }}
           >
             Training The Consultant
           </h2>
-          <p className="text-primary text-[16px] md:text-[18px] font-semibold font-[Nunito_Sans] mb-6">
+          <p className="text-primary text-[16px] md:text-[18px] font-semibold font-sans mb-6">
             Maximise Your Potential as a Certified Trainer:
           </p>
-          <p className="text-main-text text-[16px] md:text-[18px] font-normal font-[Nunito_Sans] leading-[1.6] mb-10">
-            With the help of our Training Consultants program, take a revolutionary step
-            toward becoming a distinguished certified training consultant. Learn from
-            professionals in the field, immerse yourself in a thorough curriculum, and hone
-            your training methods through interactive workshops. Participating in our
-            program will enable you to gain expertise in diverse courses while also
-            developing the abilities to mentor and encourage others in their career
-            advancement.
+          <p className="text-main-text text-[14px] md:text-[18px] font-normal font-sans leading-[1.6] mb-10">
+            With the help of our Training Consultants program, take a
+            revolutionary step toward becoming a distinguished certified
+            training consultant. Learn from professionals in the field, immerse
+            yourself in a thorough curriculum, and hone your training methods
+            through interactive workshops. Participating in our program will
+            enable you to gain expertise in diverse courses while also
+            developing the abilities to mentor and encourage others in their
+            career advancement.
           </p>
 
-          <div className="bg-purple-80 rounded-[8px] overflow-hidden mb-10 w-full shadow-md">
+          <div className="bg-primary rounded-[8px] overflow-hidden mb-10 w-full shadow-md">
             <div className="grid grid-cols-1 md:grid-cols-2">
               {features.map((feature, i) => (
                 <div
                   key={feature.title}
                   className={`p-8 lg:p-10 ${
                     i < 2 ? "border-b border-primary" : ""
-                  } ${
-                    i % 2 === 0 ? "md:border-r border-primary" : ""
-                  }`}
+                  } ${i % 2 === 0 ? "md:border-r border-primary" : ""}`}
                 >
-                  <h3 className="text-white font-semibold font-[Nunito_Sans] text-[16px] md:text-[18px] mb-4">
+                  <h3 className="text-white font-semibold font-sans text-[16px] md:text-[18px] mb-4">
                     {feature.title}
                   </h3>
-                  <p className="text-white/70 text-[16px] md:text-[18px] font-normal font-[Nunito_Sans] leading-[1.65]">
+                  <p className="text-white/70 text-[14px] md:text-[18px] font-normal font-sans leading-[1.65]">
                     {feature.description}
                   </p>
                 </div>
@@ -75,7 +74,7 @@ export default function TrainingConsultant() {
 
           <Link
             href="#"
-            className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-[#45103A] text-white text-[16px] md:text-[18px] font-semibold font-[Nunito_Sans] px-8 h-[48px] rounded-[4px] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary w-fit"
+            className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-[#45103A] text-white text-[16px] md:text-[18px] font-semibold font-sans px-8 h-[48px] rounded-[4px] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary w-fit"
           >
             Learn More
             <svg

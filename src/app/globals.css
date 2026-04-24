@@ -2,19 +2,19 @@
 
 @theme inline {
   --color-primary: #571244;
-  --color-secondary: #EF4353;
+  --color-secondary: #ef4353;
   --color-main-text: #151515;
-  --color-pending-main: #1671D9;
-  --color-purple-80: #2C0922;
-  --color-purple-90: #1D0617;
-  --color-purple-40: #8F6182;
-  --color-primary-tint: #5712441A;
-  --color-pink-50: #FDF4FF;
-  --color-footer-bg: #120D22;
-  --color-get-in-touch-bg: #1A0629;
+  --color-pending-main: #1671d9;
+  --color-purple-80: #2c0922;
+  --color-purple-90: #1d0617;
+  --color-purple-40: #8f6182;
+  --color-primary-tint: #5712441a;
+  --color-pink-50: #fdf4ff;
+  --color-footer-bg: #120d22;
+  --color-get-in-touch-bg: #1a0629;
 
-  --font-sans: "Nunito Sans", sans-serif;
-  --font-heading: "Nunito", sans-serif;
+  --font-sans: var(--font-nunito-sans);
+  --font-heading: var(--font-nunito);
 }
 
 * {

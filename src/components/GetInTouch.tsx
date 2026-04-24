@@ -6,7 +6,7 @@ export default function GetInTouch() {
       className="bg-get-in-touch-bg py-12 md:py-16"
       aria-labelledby="git-heading"
     >
-      <div className="max-w-[1312px] mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="max-w-[1312px] mx-auto px-6 md:px-16 flex flex-start md:flex-row items-center justify-between gap-8">
         <div className="text-center md:text-left">
           <p className="text-white/60 text-[14px] md:text-[16px] font-normal font-[Nunito_Sans] mb-2">
             Ready to be a part of something extraordinary?

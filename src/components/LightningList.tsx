@@ -8,31 +8,30 @@ export default function LightningList({
   light = false,
 }: LightningListProps) {
   return (
-    <ul className="flex flex-col gap-3" role="list">
+    <ul className="flex flex-col gap-2" role="list">
       {items.map((item) => (
-        <li key={item} className="flex items-center gap-3 text-[16px] md:text-[18px]">
-          {/* Lightning bolt: 12.44×16, fill #1D0617 (dark mode: white) */}
+        <li
+          key={item}
+          className="flex items-center gap-3 text-[15px] md:text-[16px]"
+        >
           <svg
-            width="13"
+            width="12"
             height="16"
-            viewBox="0 0 16 20"
+            viewBox="0 0 12 16"
             fill="none"
             className="shrink-0"
             aria-hidden="true"
           >
             <path
-              d="M11.5 1L4 11.5h6.5L7 19l8-11H8.5L11.5 1Z"
-              fill={light ? "#FFFFFF" : "#1D0617"}
-              stroke={light ? "#FFFFFF" : "#1D0617"}
-              strokeWidth="1.5"
-              strokeLinejoin="round"
+              d="M7 0L0 9h5.5L4 16l8-9H7V0z"
+              fill={light ? "#FFFFFF" : "#571244"}
             />
           </svg>
           <span
             className={
               light
-                ? "text-white font-[Nunito_Sans] font-normal"
-                : "text-main-text font-[Nunito_Sans] font-normal"
+                ? "text-white font-sans font-normal"
+                : "text-main-text font-sans font-normal"
             }
           >
             {item}

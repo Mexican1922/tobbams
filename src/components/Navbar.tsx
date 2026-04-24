@@ -20,81 +20,79 @@ export default function Navbar() {
   return (
     <header className="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="w-full max-w-[1440px] mx-auto">
-        {/* Top row: Logo + Buttons */}
-        <div className="flex items-center justify-between h-auto py-4 md:h-[103px] px-6 lg:px-16">
-          {/* Logo */}
+        {/* ── Top row: Logo + Buttons ── */}
+        <div className="flex items-center justify-between h-[80px] md:h-[103px] px-6 lg:px-16">
+          {/* Logo — icon only, no text */}
           <Link
             href="/"
             aria-label="Tobams Group Home"
-            className="flex items-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
+            className="flex items-center outline-none focus-visible:ring-2 focus-visible:ring-[#571244] rounded-sm"
           >
             <Image
               src="/images/logo.png"
-              alt="Tobams Group Logo"
-              width={40}
-              height={40}
-              className="shrink-0 w-8 h-8 md:w-10 md:h-10"
+              alt="Tobams Group"
+              width={165.71}
+              height={64}
+              className="h-20 w-auto object-contain"
               priority
             />
-            <div className="flex flex-col leading-none">
-              <span className="text-[11px] md:text-[13px] font-semibold tracking-[0.15em] text-primary uppercase font-[Nunito_Sans]">
-                TOBAMS
-              </span>
-              <span className="text-[8px] md:text-[10px] font-semibold tracking-[0.15em] text-primary uppercase mt-[1px] font-[Nunito_Sans]">
-                GROUP
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Buttons */}
           <div className="hidden lg:flex items-center gap-4">
-            {/* Account button - Outlined with visible icon */}
-            <button className="flex items-center justify-center gap-2 bg-transparent text-primary border border-primary rounded-[4px] px-6 h-[48px] text-[18px] font-semibold font-[Nunito_Sans] hover:bg-primary/5 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 shrink-0">
-              <div className="flex items-center justify-center shrink-0 text-primary">
+            {/* Account — outlined with separated icon background */}
+            <button className="flex items-center gap-0 bg-[#571244] text-[#DDD0DA] border-2 border-[#571244] rounded-[4px] h-[48px] font-semibold font-sans transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#571244]">
+              {/* Icon circle — centered with padding so it doesn't touch edges */}
+              <span className="flex items-center justify-center pl-3">
+                <span className="flex items-center justify-center bg-[#DDD0DA] h-[32px] w-[32px] rounded-full shrink-0">
+                  <svg
+                    width="14"
+                    height="16"
+                    viewBox="0 0 16 18"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <circle
+                      cx="8"
+                      cy="5"
+                      r="3.5"
+                      stroke="#571244"
+                      strokeWidth="1.5"
+                    />
+                    <path
+                      d="M1 17c0-3.866 3.134-6 7-6s7 2.134 7 6"
+                      stroke="#571244"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+              </span>
+
+              {/* Text + chevron */}
+              <span className="flex items-center gap-2 px-4 text-[16px]">
+                Account
                 <svg
-                  width="16"
-                  height="18"
-                  viewBox="0 0 16 18"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
                   fill="none"
                   aria-hidden="true"
-                  className="text-primary"
                 >
-                  <circle
-                    cx="8"
-                    cy="5"
-                    r="3.5"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  />
                   <path
-                    d="M1 17c0-3.866 3.134-6 7-6s7 2.134 7 6"
+                    d="M3 4.5L6 7.5L9 4.5"
                     stroke="currentColor"
                     strokeWidth="1.5"
                     strokeLinecap="round"
                   />
                 </svg>
-              </div>
-              Account
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M3 4.5L6 7.5L9 4.5"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                />
-              </svg>
+              </span>
             </button>
 
-            {/* Take Assessment */}
+            {/* Take Assessment — filled red */}
             <Link
               href="#"
-              className="bg-secondary text-white rounded-[4px] px-6 h-[48px] flex items-center justify-center text-[18px] font-semibold font-[Nunito_Sans] hover:bg-[#D93A49] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 shrink-0"
+              className="bg-[#ef4353] text-white rounded-[4px] px-5 h-[48px] flex items-center justify-center text-[16px] font-semibold font-sans hover:bg-[#d93a49] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#ef4353]"
             >
               Take Assessment
             </Link>
@@ -102,7 +100,7 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden p-2 rounded-md text-primary outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="lg:hidden p-2 rounded-md text-[#571244] outline-none focus-visible:ring-2 focus-visible:ring-[#571244]"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle navigation menu"
             aria-expanded={menuOpen}
@@ -133,44 +131,45 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Bottom nav links row */}
+        {/* ── Desktop nav links row ── */}
         <nav
           aria-label="Main navigation"
           className="hidden lg:flex items-center justify-center h-[69px] border-t border-gray-100"
         >
-          <div className="w-full max-w-[1045px] px-4 flex justify-between items-center gap-6 overflow-x-auto hide-scrollbar">
+          <ul className="flex items-center justify-between w-full max-w-[1080px] px-8 list-none m-0 p-0">
             {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="group flex items-center gap-1 text-[16px] xl:text-[18px] whitespace-nowrap font-semibold font-[Nunito_Sans] text-main-text hover:text-primary transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary relative"
-              >
-                <span>{link.label}</span>
-                {link.hasDropdown && (
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    aria-hidden="true"
-                    className="shrink-0 transition-transform group-hover:rotate-180"
-                  >
-                    <path
-                      d="M3 4.5L6 7.5L9 4.5"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                )}
-                {/* Underline effect on hover */}
-                <span className="absolute -bottom-2 left-0 w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </Link>
+              <li key={link.label} className="relative">
+                <Link
+                  href={link.href}
+                  className="group flex items-center gap-1 text-[15px] xl:text-[16px] whitespace-nowrap font-semibold font-sans text-[#151515] hover:text-[#571244] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#571244] py-2"
+                >
+                  <span>{link.label}</span>
+                  {link.hasDropdown && (
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      aria-hidden="true"
+                      className="shrink-0 transition-transform duration-200 group-hover:rotate-180"
+                    >
+                      <path
+                        d="M3 4.5L6 7.5L9 4.5"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  )}
+                  {/* Hover underline — sits at bottom of the <li> */}
+                  <span className="absolute -bottom-[-8px] left-0 w-full h-[2px] bg-[#571244] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </nav>
 
-        {/* Mobile menu */}
+        {/* ── Mobile menu ── */}
         {menuOpen && (
           <nav
             aria-label="Mobile navigation"
@@ -181,7 +180,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="px-3 py-3 text-[16px] font-semibold font-[Nunito_Sans] text-main-text hover:text-primary hover:bg-primary/5 rounded-md transition-colors flex items-center justify-between"
+                  className="px-3 py-3 text-[16px] font-semibold font-sans text-[#151515] hover:text-[#571244] hover:bg-[#5712440d] rounded-md transition-colors flex items-center justify-between"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
@@ -204,12 +203,12 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-gray-100 mt-2">
-                <button className="flex items-center justify-center gap-2 bg-transparent text-primary border border-primary rounded-[4px] px-4 h-[48px] text-[16px] font-semibold font-[Nunito_Sans] w-full">
+                <button className="flex items-center justify-center gap-2 bg-white text-[#571244] border-2 border-[#571244] rounded-[4px] px-4 h-[48px] text-[16px] font-semibold font-sans w-full">
                   Account
                 </button>
                 <Link
                   href="#"
-                  className="flex items-center justify-center bg-secondary text-white rounded-[4px] px-4 h-[48px] text-[16px] font-semibold font-[Nunito_Sans] text-center w-full"
+                  className="flex items-center justify-center bg-[#ef4353] text-white rounded-[4px] px-4 h-[48px] text-[16px] font-semibold font-sans w-full hover:bg-[#d93a49] transition-colors"
                 >
                   Take Assessment
                 </Link>
