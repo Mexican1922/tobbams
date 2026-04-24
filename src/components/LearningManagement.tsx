@@ -18,8 +18,13 @@ export default function LearningManagement() {
     >
       <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-16">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          {/* Circular Image */}
-          <div className="w-full max-w-[400px] lg:max-w-[557px] shrink-0">
+          {/* Title — mobile only, always first */}
+          <h2 className="lg:hidden w-full font-heading font-semibold text-[20px] md:text-[36px] text-primary leading-tight tracking-wide order-1">
+            Learning Management System
+          </h2>
+
+          {/* Circular Image — second on mobile, left on desktop */}
+          <div className="w-full max-w-[400px] lg:max-w-[557px] shrink-0 order-2 lg:order-1">
             <div className="relative w-full aspect-square rounded-full overflow-hidden bg-gray-100 shadow-sm">
               <Image
                 src="/images/lms-people.jpg"
@@ -31,18 +36,18 @@ export default function LearningManagement() {
             </div>
           </div>
 
-          {/* Content block */}
-          <div className="w-full max-w-[675px] flex flex-col pt-4">
+          {/* Content block — third on mobile, right on desktop */}
+          <div className="w-full max-w-[675px] flex flex-col pt-4 order-3 lg:order-2">
+            {/* Desktop title — hidden on mobile */}
             <h2
               id="lms-heading"
-              className="font-heading font-semibold text-[28px] md:text-[36px] lg:text-[40px] text-primary leading-tight mb-6 tracking-wide"
+              className="hidden lg:block font-heading font-semibold lg:text-[40px] text-primary leading-tight mb-6 tracking-wide"
             >
               Learning Management System
             </h2>
 
-            {/* Single pink card — contains body text + courses */}
+            {/* Single pink card */}
             <div className="bg-[#d9ccd6] rounded-[8px] p-6 lg:p-8 mb-6 w-full flex flex-col gap-4">
-              {/* Body text inside the card */}
               <p className="text-main-text text-[15px] md:text-[16px] font-sans leading-[1.6]">
                 TG Academy is a hub of knowledge and skill-building resources
                 designed to empower tech talents on their learning journey. From
@@ -54,8 +59,6 @@ export default function LearningManagement() {
                 individuals can enhance their skills and stay ahead in
                 today&apos;s competitive tech landscape.
               </p>
-
-              {/* Courses label + 3-col grid */}
               <div className="flex flex-col gap-3">
                 <p className="text-primary text-[15px] md:text-[16px] font-semibold font-sans">
                   Some of our courses include:

@@ -21,14 +21,14 @@ export default function ManagementDevelopment() {
           </h2>
 
           {/* Image — second on mobile, left on desktop */}
-          <div className="w-full lg:w-5/12 shrink-0 max-w-[500px] order-2 lg:order-1">
-            <div className="relative w-full aspect-[592/639] overflow-hidden rounded-[12px]">
+          <div className="w-full lg:w-5/12 shrink-0 max-w-[500px] mx-auto order-2 lg:order-1">
+            <div className="relative w-full aspect-[4/3] lg:aspect-[520/600] overflow-hidden rounded-[12px]">
               <Image
                 src="/images/management.jpg"
                 alt="Group of professionals collaborating in a management development session"
                 fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 592px"
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 520px"
               />
             </div>
           </div>
