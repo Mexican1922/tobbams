@@ -36,7 +36,7 @@ const solution = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#12040f] text-white pt-16 md:pt-20 pb-8">
+    <footer className="bg-[#11040E] text-white pt-16 md:pt-20 pb-8">
       <div className="max-w-[1312px] mx-auto px-6 md:px-16">
         {/* Top grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-16">
@@ -51,8 +51,7 @@ export default function Footer() {
                 className="h-16 w-auto"
               />
             </Link>
-
-            <p className="text-white/60 text-[14px] font-[Nunito_Sans] leading-[1.7] mb-8">
+            <p className="text-white/60 text-[14px] font-sans leading-[1.7] mb-8">
               Tobams Group is an innovative consultancy firm reshaping the
               future of tech talent development in Africa, specializing in
               talent acquisition, internships, and skill development with a
@@ -61,11 +60,11 @@ export default function Footer() {
 
             {/* Socials */}
             <div className="flex items-center gap-3">
-              {/* LinkedIn */}
+              {/* LinkedIn — transparent bg, white icon */}
               <Link
                 href="#"
                 aria-label="LinkedIn"
-                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-colors"
+                className="w-9 h-9 rounded-full border flex items-center justify-center bg-white text-[#12040f] hover:bg-gray-200  transition-colors"
               >
                 <svg
                   width="16"
@@ -78,11 +77,11 @@ export default function Footer() {
                 </svg>
               </Link>
 
-              {/* Instagram */}
+              {/* Instagram — white bg, dark icon */}
               <Link
                 href="#"
                 aria-label="Instagram"
-                className="w-9 h-9 rounded-full border bg-white border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-colors"
+                className="w-9 h-9 rounded-full bg-white flex items-center justify-center text-[#12040f] hover:bg-gray-200 transition-colors"
               >
                 <svg
                   width="16"
@@ -101,11 +100,11 @@ export default function Footer() {
                 </svg>
               </Link>
 
-              {/* X (Twitter) */}
+              {/* X — white bg, dark icon */}
               <Link
                 href="#"
                 aria-label="X"
-                className="w-9 h-9 rounded-full border bg-white border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-colors"
+                className="w-9 h-9 rounded-full bg-white flex items-center justify-center text-[#12040f] hover:bg-gray-200 transition-colors"
               >
                 <svg
                   width="14"
@@ -122,7 +121,7 @@ export default function Footer() {
 
           {/* What We Do */}
           <div>
-            <h3 className="text-white text-[16px] font-semibold font-[Nunito_Sans] mb-6">
+            <h3 className="text-white text-[16px] font-semibold font-sans mb-6">
               What We Do
             </h3>
             <ul className="flex flex-col gap-3">
@@ -130,7 +129,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="#"
-                    className="text-white/60 text-[14px] font-[Nunito_Sans] hover:text-white transition"
+                    className="text-white/60 text-[14px] font-sans hover:text-white transition-colors"
                   >
                     {item}
                   </Link>
@@ -141,7 +140,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-white text-[16px] font-semibold font-[Nunito_Sans] mb-6">
+            <h3 className="text-white text-[16px] font-semibold font-sans mb-6">
               Company
             </h3>
             <ul className="flex flex-col gap-3">
@@ -149,7 +148,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="#"
-                    className="text-white/60 text-[14px] font-[Nunito_Sans] hover:text-white transition"
+                    className="text-white/60 text-[14px] font-sans hover:text-white transition-colors"
                   >
                     {item}
                   </Link>
@@ -160,7 +159,7 @@ export default function Footer() {
 
           {/* Solution */}
           <div>
-            <h3 className="text-white text-[16px] font-semibold font-[Nunito_Sans] mb-6">
+            <h3 className="text-white text-[16px] font-semibold font-sans mb-6">
               Solution
             </h3>
             <ul className="flex flex-col gap-3">
@@ -168,7 +167,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="#"
-                    className="text-white/60 text-[14px] font-[Nunito_Sans] hover:text-white transition"
+                    className="text-white/60 text-[14px] font-sans hover:text-white transition-colors"
                   >
                     {item}
                   </Link>
@@ -180,20 +179,18 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-white/10 pt-10 mb-10">
-          {/* Card */}
-          <div className="bg-[#1A0629] rounded-[12px] p-8 md:p-10 grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
-            {/* Offices */}
-            <div className="lg:col-span-2">
-              <h3 className="text-white text-[16px] font-semibold font-[Nunito_Sans] mb-6">
+          <div className="bg-[#1f131c] rounded-[12px] p-8 md:p-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+            {/* Registered Offices */}
+            <div>
+              <h3 className="text-white text-[16px] font-semibold font-sans mb-6">
                 Registered Offices
               </h3>
-
               <div className="flex flex-col sm:flex-row gap-10">
                 <div>
-                  <p className="text-[#ba3643] text-[13px] font-semibold mb-2">
+                  <p className="text-[#ba3643] text-[13px] font-semibold font-sans mb-2">
                     United Kingdom
                   </p>
-                  <p className="text-white/60 text-[13px] leading-[1.8]">
+                  <p className="text-white/60 text-[13px] font-sans leading-[1.8]">
                     07451196 (Registered by Company House)
                     <br />
                     Vine Cottages, 215 North Street,
@@ -201,12 +198,11 @@ export default function Footer() {
                     Romford, Essex, RM1 4QA
                   </p>
                 </div>
-
                 <div>
-                  <p className="text-[#ba3643] text-[13px] font-semibold mb-2">
+                  <p className="text-[#ba3643] text-[13px] font-semibold font-sans mb-2">
                     Nigeria
                   </p>
-                  <p className="text-white/60 text-[13px] leading-[1.8]">
+                  <p className="text-white/60 text-[13px] font-sans leading-[1.8]">
                     RC 1048722 (Registered by CAC)
                     <br />
                     4, Muaz Close, Angwar-Rimi
@@ -215,23 +211,46 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Contact */}
+            {/* Contact Information */}
             <div>
-              <h3 className="text-white text-[16px] font-semibold font-[Nunito_Sans] mb-6">
+              <h3 className="text-white text-[16px] font-semibold font-sans mb-6">
                 Contact Information
               </h3>
-
               <ul className="flex flex-col gap-4">
                 <li className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center" />
-                  <span className="text-white/60 text-[14px]">
+                  <span className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="2"
+                      aria-hidden="true"
+                    >
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                  </span>
+                  <span className="text-white/60 text-[14px] font-sans">
                     theteam@tobamsgroup.com
                   </span>
                 </li>
-
                 <li className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center" />
-                  <span className="text-white/60 text-[14px]">
+                  <span className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="2"
+                      aria-hidden="true"
+                    >
+                      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-5.68-5.68A19.79 19.79 0 012.44 4.51 2 2 0 014.62 2.5h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 10.91a16.06 16.06 0 006 6l1.77-1.77a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2.03z" />
+                    </svg>
+                  </span>
+                  <span className="text-white/60 text-[14px] font-sans">
                     +447886600748
                   </span>
                 </li>
@@ -242,26 +261,25 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/50 text-[13px] font-[Nunito_Sans] text-center md:text-left">
+          <p className="text-white/50 text-[13px] font-sans text-center md:text-left">
             Copyright © Tobams Group, 2024. All rights reserved.
           </p>
-
           <div className="flex flex-wrap justify-center gap-6">
             <Link
               href="#"
-              className="text-white/50 text-[13px] hover:text-white"
+              className="text-white/50 text-[13px] font-sans hover:text-white transition-colors"
             >
               Terms and Conditions
             </Link>
             <Link
               href="#"
-              className="text-white/50 text-[13px] hover:text-white"
+              className="text-white/50 text-[13px] font-sans hover:text-white transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               href="#"
-              className="text-white/50 text-[13px] hover:text-white"
+              className="text-white/50 text-[13px] font-sans hover:text-white transition-colors"
             >
               Cookies Policy
             </Link>

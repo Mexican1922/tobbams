@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function GetInTouch() {
   return (
     <section
-      className="bg-[#1c0616] py-12 md:py-16"
+      className="bg-[#1c0616] py-12 md:py-16 border-b border-white/20"
       aria-labelledby="git-heading"
     >
       <div className="max-w-[1312px] mx-auto px-6 md:px-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8">
